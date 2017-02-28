@@ -11,7 +11,7 @@ section {
 }
 
 .wrapper-bg {
-	background: url('http://eskipaper.com/images/free-school-wallpaper-1.jpg');
+	background: url('../images/backgrounds/school-wallpaper.jpg');
 }
 
 #footer, #topBar, .section-smoke .container {

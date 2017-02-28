@@ -5,7 +5,7 @@ $(document).ready(function () {
 		var me = $(this),
 			role = me.attr('data-role'),
 			currTab = $('.nav-tabs .active');
-		var isValidForm = validateSurveyForm() || true;
+		var isValidForm = validateSurveyForm();
 		// console.log('--- tab-control button: CLICK' + role + isValidForm);
 
 		if (role == 'prev-tab' && !currTab.is(':first-child')) {
@@ -117,7 +117,7 @@ $(document).ready(function () {
 });
 
 function validateSurveyForm() {
-	function validateInput(input) {
+	function validateInput(input) { // used for text, textarea, select 
 		if (input.val() == null || input.val() == '')
 			return false;
 		return true;
@@ -143,6 +143,8 @@ function validateSurveyForm() {
 		// Check input type cases
 		if ($(e).hasClass('ss-text'))
 			isValidInput = validateInput($(e).find('input'));
+		else if ($(e).hasClass('ss-textarea'))
+			isValidInput = validateInput($(e).find('textarea'));
 		else if ($(e).hasClass('ss-radio'))
 			isValidInput = validateRadio($(e).find('.ss-choices'));
 		else if ($(e).hasClass('ss-select'))
