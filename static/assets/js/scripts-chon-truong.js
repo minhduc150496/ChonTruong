@@ -65,7 +65,9 @@ $(document).ready(function() {
                 '<option value="50">50</option>'+
                 '<option value="-1">Tất cả</option>'+
                 '</select> kết quả',
-                "sZeroRecords": "Danh sách trống"
+                "sZeroRecords": "Danh sách trống",
+                "sInfo": "Kết quả từ _START_ đến _END_ (trong tổng số _TOTAL_).",
+                "sSearch": "Tìm kiếm:"
             }
         });
 

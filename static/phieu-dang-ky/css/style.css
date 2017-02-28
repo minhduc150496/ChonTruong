@@ -383,6 +383,16 @@ select {
 	width: 100%;
 }
 
+.tab-pane-reserve .ss-form-question {
+	margin-bottom: 0;
+}
+.tab-pane-reserve label {
+	margin-bottom: 0;
+}
+.tab-pane-reserve .row {
+	margin-bottom: 25px;
+}
+
 /*
 .tab-pane-subjects .ss-choice-item {
 	margin-right: 10px;
