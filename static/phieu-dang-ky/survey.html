@@ -31,11 +31,11 @@
 									var submitted = false;
 								</script>
 								<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='success.html'}"></iframe>
-								<form class="form-horizontal" id="formSurvey" action="SomeAction" method="post">
+								<form class="form-horizontal" id="formSurvey">
 									<div class="ss-page-info" id="pageInfo">5/20</div>
 									<!-- Nav tabs -->
 									<ul class="nav nav-tabs nav-fixed-top" role="tablist" id="tabHead">
-										<li data-page-number="1"><a data-toggle="tab" href="#page_0"></a></li>
+										<li data-page-number="1" class="active"><a data-toggle="tab" href="#page_0"></a></li>
 										<li data-page-number="2"><a data-toggle="tab" href="#page_1"></a></li>
 										<li data-page-number="3"><a data-toggle="tab" href="#page_2"></a></li>
 										<li data-page-number="4"><a data-toggle="tab" href="#page_3"></a></li>
@@ -47,7 +47,7 @@
 										<li data-page-number="8"><a data-toggle="tab" href="#page_9"></a></li>
 										<li data-page-number="9"><a data-toggle="tab" href="#page_10"></a></li>
 										<li data-page-number="10"><a data-toggle="tab" href="#page_11"></a></li>
-										<li class="active" data-page-number="11"><a data-toggle="tab" href="#page_12"></a></li>
+										<li data-page-number="11"><a data-toggle="tab" href="#page_12"></a></li>
 										<li data-page-number="12"><a data-toggle="tab" href="#page_13"></a></li>
 										<li data-page-number="13"><a data-toggle="tab" href="#page_14"></a></li>
 										<li data-page-number="14a"><a data-toggle="tab" href="#page_15"></a></li>
@@ -62,7 +62,7 @@
 									<!-- Tab panes -->
 									<div class="tab-content fullheight" id="tabContent">
 
-										<div class="tab-pane fade in" id="page_0">
+										<div class="tab-pane fade in active" id="page_0">
 											<div class="ss-form-question errorbox-good" role="listitem">
 												<div dir="auto" class="ss-item ss-item-required ss-text">
 													<div class="ss-form-entry">
@@ -332,77 +332,49 @@
 											<div class="ss-q-title-lg">
 												NƠI HỌC THPT HOẶC TƯƠNG ĐƯƠNG
 											</div>
-											<div class="ss-q-title">
-												Năm lớp 10
-											</div>
-											<div class="row">
-												<div class="col-sm-6">
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-select">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text" dir="auto">
-																		Tỉnh/thành:
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
-																</label>
-																<select class="ss-q-short">
-																	<option value="" selected>-- Chọn tỉnh/thành --</option>
-																	<option value="01">00 - An Giang</option>
-																	<option value="02">01 - Bà Rịa - Vũng Tàu</option>
-																	<option value="03">02 - Bạc Liêu</option>
-																</select>				
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-sm-6">
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-select">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text" dir="auto">
-																		Quận/huyện:
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
-																</label>
-																<select class="ss-q-short">
-																	<option value="" selected>-- Chọn quận/huyện --</option>
-																	<option value="01">Quận 1</option>
-																	<option value="02">Quận 2</option>
-																	<option value="03">Quận 3</option>
-																</select>				
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
 											<div class="ss-form-question errorbox-good" role="listitem">
-												<div dir="auto" class="ss-item ss-item-required ss-select">
+												<div dir="auto" class="ss-item ss-item-required ss-text">
 													<div class="ss-form-entry">
 														<label class="ss-q-item-label" for="entry_1712865040">
-															<div class="ss-q-help ss-secondary-text" dir="auto">
-																Trường:
+															<div class="ss-q-title">Năm lớp 10
+																<label for="itemView.getDomIdToLabel()" aria-label="(Required field)">
+																</label>
 																<span class="ss-required-asterisk" aria-hidden="true">*
 																</span>
 															</div>
 														</label>
-														<select class="ss-q-short">
-															<option value="" selected>-- Chọn trường --</option>
-															<option value="001">001 - THPT Nguyễn Thượng Hiền</option>
-															<option value="002">002 - THPT Mạc Đĩnh Chi</option>
-															<option value="003">003 - THPT Nguyễn Khuyến</option>
-														</select>				
+														<div class="row">
+															<div class="col-sm-6">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Tỉnh/thành:
+																</div>
+																<select class="ss-q-short">
+																	<option>00 - An Giang</option>
+																	<option>01 - Bà Rịa - Vũng Tàu</option>
+																	<option>02 - Bạc Liêu</option>
+																</select>
+															</div>
+															<div class="col-sm-6">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Quận/huyện:
+																</div>
+																<select class="ss-q-short">
+																	<option>Quận 1</option>
+																	<option>Quận 2</option>
+																	<option>Quận 3</option>
+																</select>
+															</div>
+															<div class="col-sm-12">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Trường:
+																</div>
+																<select class="ss-q-short">
+																	<option>000 - THPT Nguyễn Thượng Hiền</option>
+																	<option>001 - THPT Trí Đức</option>
+																	<option>002 - THPT Mạc Đĩnh Chi</option>
+																</select>
+															</div>
+														</div>							
 														<div class="error-message" id="1236216492_errorMessage">
 														</div>
 														<div class="required-message">Đây là câu hỏi bắt buộc
@@ -416,77 +388,49 @@
 											<div class="ss-q-title-lg">
 												NƠI HỌC THPT HOẶC TƯƠNG ĐƯƠNG
 											</div>
-											<div class="ss-q-title">
-												Năm lớp 11
-											</div>
-											<div class="row">
-												<div class="col-sm-6">
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-select">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text" dir="auto">
-																		Tỉnh/thành:
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
-																</label>
-																<select class="ss-q-short">
-																	<option value="" selected>-- Chọn tỉnh/thành --</option>
-																	<option value="01">00 - An Giang</option>
-																	<option value="02">01 - Bà Rịa - Vũng Tàu</option>
-																	<option value="03">02 - Bạc Liêu</option>
-																</select>				
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-sm-6">
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-select">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text" dir="auto">
-																		Quận/huyện:
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
-																</label>
-																<select class="ss-q-short">
-																	<option value="" selected>-- Chọn quận/huyện --</option>
-																	<option value="01">Quận 1</option>
-																	<option value="02">Quận 2</option>
-																	<option value="03">Quận 3</option>
-																</select>				
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
 											<div class="ss-form-question errorbox-good" role="listitem">
-												<div dir="auto" class="ss-item ss-item-required ss-select">
+												<div dir="auto" class="ss-item ss-item-required ss-text">
 													<div class="ss-form-entry">
 														<label class="ss-q-item-label" for="entry_1712865040">
-															<div class="ss-q-help ss-secondary-text" dir="auto">
-																Trường:
+															<div class="ss-q-title">Năm lớp 11
+																<label for="itemView.getDomIdToLabel()" aria-label="(Required field)">
+																</label>
 																<span class="ss-required-asterisk" aria-hidden="true">*
 																</span>
 															</div>
 														</label>
-														<select class="ss-q-short">
-															<option value="" selected>-- Chọn trường --</option>
-															<option value="001">001 - THPT Nguyễn Thượng Hiền</option>
-															<option value="002">002 - THPT Mạc Đĩnh Chi</option>
-															<option value="003">003 - THPT Nguyễn Khuyến</option>
-														</select>				
+														<div class="row">
+															<div class="col-sm-6">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Tỉnh/thành:
+																</div>
+																<select class="ss-q-short">
+																	<option>00 - An Giang</option>
+																	<option>01 - Bà Rịa - Vũng Tàu</option>
+																	<option>02 - Bạc Liêu</option>
+																</select>
+															</div>
+															<div class="col-sm-6">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Quận/huyện:
+																</div>
+																<select class="ss-q-short">
+																	<option>Quận 1</option>
+																	<option>Quận 2</option>
+																	<option>Quận 3</option>
+																</select>
+															</div>
+															<div class="col-sm-12">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Trường:
+																</div>
+																<select class="ss-q-short">
+																	<option>000 - THPT Nguyễn Thượng Hiền</option>
+																	<option>001 - THPT Trí Đức</option>
+																	<option>002 - THPT Mạc Đĩnh Chi</option>
+																</select>
+															</div>
+														</div>							
 														<div class="error-message" id="1236216492_errorMessage">
 														</div>
 														<div class="required-message">Đây là câu hỏi bắt buộc
@@ -500,79 +444,68 @@
 											<div class="ss-q-title-lg">
 												NƠI HỌC THPT HOẶC TƯƠNG ĐƯƠNG
 											</div>
-											<div class="ss-q-title">
-												Năm lớp 12
-											</div>
-											<div class="row">
-												<div class="col-sm-6">
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-select">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text" dir="auto">
-																		Tỉnh/thành:
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
+											<div class="ss-form-question errorbox-good" role="listitem">
+												<div dir="auto" class="ss-item ss-item-required ss-text">
+													<div class="ss-form-entry">
+														<label class="ss-q-item-label" for="entry_1712865040">
+															<div class="ss-q-title">Năm lớp 12
+																<label for="itemView.getDomIdToLabel()" aria-label="(Required field)">
 																</label>
-																<select class="ss-q-short">
-																	<option value="" selected>-- Chọn tỉnh/thành --</option>
-																	<option value="01">00 - An Giang</option>
-																	<option value="02">01 - Bà Rịa - Vũng Tàu</option>
-																	<option value="03">02 - Bạc Liêu</option>
-																</select>				
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
+																<span class="ss-required-asterisk" aria-hidden="true">*
+																</span>
 															</div>
+														</label>
+														<div class="row">
+															<div class="col-sm-6">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Tỉnh/thành:
+																</div>
+																<select class="ss-q-short">
+																	<option>00 - An Giang</option>
+																	<option>01 - Bà Rịa - Vũng Tàu</option>
+																	<option>02 - Bạc Liêu</option>
+																</select>
+															</div>
+															<div class="col-sm-6">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Quận/huyện:
+																</div>
+																<select class="ss-q-short">
+																	<option>Quận 1</option>
+																	<option>Quận 2</option>
+																	<option>Quận 3</option>
+																</select>
+															</div>
+															<div class="col-sm-12">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Trường:
+																</div>
+																<select class="ss-q-short">
+																	<option>000 - THPT Nguyễn Thượng Hiền</option>
+																	<option>001 - THPT Trí Đức</option>
+																	<option>002 - THPT Mạc Đĩnh Chi</option>
+																</select>
+															</div>
+														</div>								
+														<div class="error-message" id="1236216492_errorMessage">
 														</div>
-													</div>
-												</div>
-												<div class="col-sm-6">
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-select">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text" dir="auto">
-																		Quận/huyện:
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
-																</label>
-																<select class="ss-q-short">
-																	<option value="" selected>-- Chọn quận/huyện --</option>
-																	<option value="01">Quận 1</option>
-																	<option value="02">Quận 2</option>
-																	<option value="03">Quận 3</option>
-																</select>				
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
-															</div>
+														<div class="required-message">Đây là câu hỏi bắt buộc
 														</div>
 													</div>
 												</div>
 											</div>
 											<div class="ss-form-question errorbox-good" role="listitem">
-												<div dir="auto" class="ss-item ss-item-required ss-select">
+												<div dir="auto" class="ss-item ss-item-required ss-text">
 													<div class="ss-form-entry">
 														<label class="ss-q-item-label" for="entry_1712865040">
-															<div class="ss-q-help ss-secondary-text" dir="auto">
-																Trường:
+															<div class="ss-q-title">Tên lớp 12
+																<label for="itemView.getDomIdToLabel()" aria-label="(Required field)">
+																</label>
 																<span class="ss-required-asterisk" aria-hidden="true">*
 																</span>
 															</div>
 														</label>
-														<select class="ss-q-short">
-															<option value="" selected>-- Chọn trường --</option>
-															<option value="001">001 - THPT Nguyễn Thượng Hiền</option>
-															<option value="002">002 - THPT Mạc Đĩnh Chi</option>
-															<option value="003">003 - THPT Nguyễn Khuyến</option>
-														</select>				
-														<div class="error-message" id="1236216492_errorMessage">
-														</div>
+														<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
 														<div class="required-message">Đây là câu hỏi bắt buộc
 														</div>
 													</div>
@@ -623,7 +556,7 @@
 
 										<div class="tab-pane fade in" id="page_9">
 											<div class="ss-form-question errorbox-good" role="listitem">
-												<div dir="auto" class="ss-item ss-item-required ss-textarea">
+												<div dir="auto" class="ss-item ss-item-required ss-text">
 													<div class="ss-form-entry">
 														<label class="ss-q-item-label" for="entry_1712865040">
 															<div class="ss-q-title">Địa chỉ liên hệ
@@ -937,9 +870,9 @@
 											</div>
 										</div>
 
-										<div class="tab-pane fade in active" id="page_17">
+										<div class="tab-pane fade in" id="page_17">
 											<div class="ss-form-question errorbox-good" role="listitem">
-												<div dir="auto" class="ss-item ss-item-required ss-textarea">
+												<div dir="auto" class="ss-item ss-item-required ss-text">
 													<div class="ss-form-entry">
 														<label class="ss-q-item-label" for="entry_1712865040">
 															<div class="ss-q-title">Đăng ký miễn thi ngoại ngữ
@@ -962,156 +895,62 @@
 											</div>
 										</div>
 
-										<div class="tab-pane tab-pane-reserve fade in" id="page_18">
-											<div class="ss-q-title-lg">
-												Đăng ký môn xin bảo lưu
-											</div>
-											<div class="row">
-												<div class="col-sm-6">
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-text">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text">
-																		Toán
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
+										<div class="tab-pane fade in" id="page_18">
+											<div class="ss-form-question errorbox-good" role="listitem">
+												<div dir="auto" class="ss-item ss-item-required ss-text">
+													<div class="ss-form-entry">
+														<label class="ss-q-item-label" for="entry_1712865040">
+															<div class="ss-q-title">Đăng ký môn xin bảo lưu
+																<label for="itemView.getDomIdToLabel()" aria-label="(Required field)">
 																</label>
-																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
+																<span class="ss-required-asterisk" aria-hidden="true">*
+																</span>
 															</div>
+															<div class="ss-q-help ss-secondary-text" dir="auto">
+																(Thí sinh ghi rõ điểm môn xin được bảo lưu vào ô tương ứng).
+															</div>
+														</label>
+														<div class="row">
+															<div class="col-sm-6">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Toán
+																</div>
+																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Ngữ văn
+																</div>
+																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Lịch sử
+																</div>
+																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Địa lý
+																</div>
+																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
+															</div>
+															<div class="col-sm-6">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Vật lý
+																</div>
+																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Hoá học
+																</div>
+																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Sinh học
+																</div>
+																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
+																<div class="ss-q-help ss-secondary-text" dir="auto">
+																	Ngoại ngữ
+																</div>
+																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
+															</div>
+														</div>	
+														<div class="error-message" id="1236216492_errorMessage">
 														</div>
-													</div>
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-text">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text">
-																		Ngữ văn
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
-																</label>
-																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-text">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text">
-																		Lịch sử
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
-																</label>
-																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-text">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text">
-																		Địa lí
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
-																</label>
-																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-sm-6">
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-text">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text">
-																		Vật lí
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
-																</label>
-																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-text">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text">
-																		Hoá học
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
-																</label>
-																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-text">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text">
-																		Sinh học
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
-																</label>
-																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="ss-form-question errorbox-good" role="listitem">
-														<div dir="auto" class="ss-item ss-item-required ss-text">
-															<div class="ss-form-entry">
-																<label class="ss-q-item-label" for="entry_1712865040">
-																	<div class="ss-q-help ss-secondary-text">
-																		Ngoại ngữ
-																		<span class="ss-required-asterisk" aria-hidden="true">*
-																		</span>
-																	</div>
-																</label>
-																<input type="text" name="entry.1712865040" value="" class="ss-q-short" id="entry_1712865040" dir="auto" aria-label="First Name (Tên) " aria-required="true" required="" title="">
-																<div class="error-message" id="1236216492_errorMessage">
-																</div>
-																<div class="required-message">Đây là câu hỏi bắt buộc
-																</div>
-															</div>
+														<div class="required-message">Đây là câu hỏi bắt buộc
 														</div>
 													</div>
 												</div>
@@ -1256,8 +1095,8 @@
 
 									</div>
 									<div class="tab-control">
-										<button type="button" class="btn btn-danger" data-role="prev-tab">Quay lại</button>
-										<button type="button" class="btn btn-primary pull-right" data-role="next-tab">Tiếp tục</button>
+										<button type="button" class="btn btn-danger" data-role="prev-tab">Prev</button>
+										<button type="button" class="btn btn-primary pull-right" data-role="next-tab">Next</button>
 										<button type="button" class="btn btn-success pull-right" data-role="submit" id="btnSurveySubmit">Submit</button>
 									</div>
 								</form>

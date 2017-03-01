@@ -20,27 +20,27 @@ $(document).ready(function() {
         }
 
         /*
-         * Insert a 'details' column to the table
+         * Insert a 'details' column to the table-checkbox
          */
-        var nCloneTh = document.createElement('th');
-        nCloneTh.className = "table-checkbox";
-        
-        var nCloneTd = document.createElement('td');
-        nCloneTd.innerHTML = '<span class="row-details row-details-close"></span>';
+        // var nCloneTh = document.createElement('th');
+        // nCloneTh.className = "table-checkbox";
 
-        table.find('thead tr').each(function () {
-            this.insertBefore(nCloneTh, this.childNodes[0]);
-        });
+        // var nCloneTd = document.createElement('td');
+        // nCloneTd.innerHTML = '<span class="row-details row-details-close"></span>';
 
-        table.find('tbody tr').each(function () {
-            this.insertBefore(nCloneTd.cloneNode(true), this.childNodes[0]);
-        });
+        // table.find('thead tr').each(function () {
+        //     this.insertBefore(nCloneTh, this.childNodes[0]);
+        // });
+
+        // table.find('tbody tr').each(function () {
+        //     this.insertBefore(nCloneTd.cloneNode(true), this.childNodes[0]);
+        // });
 
         var oTable = table.dataTable({
             "aoColumnDefs": [ {
-              "aTargets": [ 5 ],
+              "aTargets": [ 4 ],
               "mRender": function ( data, type, full ) {
-                return '<a href="#">Thêm</a>';
+                return '<a href="#"><i class="fa fa-close"></i></a>';
               }
             } ],
             // "columnDefs": [{
@@ -48,7 +48,7 @@ $(document).ready(function() {
             //  "targets": [0]
             // }],
             "order": [
-                [1, 'asc']
+                [0, 'asc']
             ],
             "lengthMenu": [
                 [5, 15, 20, -1],
