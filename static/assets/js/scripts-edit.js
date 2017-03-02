@@ -56,6 +56,22 @@ $(document).ready(function() {
             ],
             // set the initial value
             "pageLength": 10,
+            // set Vietnamese text
+            "oLanguage": {
+                "sSearch": "Tìm kiếm:",
+                "sZeroRecords": "Danh sách trống.",
+                "sLengthMenu": '<select>'+
+                    '<option value="10">10</option>'+
+                    '<option value="20">20</option>'+
+                    '<option value="30">30</option>'+
+                    '<option value="40">40</option>'+
+                    '<option value="50">50</option>'+
+                    '<option value="-1">All</option>'+
+                    '</select> kết quả'
+                ,
+                "sLoadingRecords ": "Xin vui lòng chờ một lát.",
+                "sInfo": "Kết quả từ _START_ đến _END_ (trong tổng số _TOTAL_)."
+            }// end: set Vietnamese text
         });
 
         var tableWrapper = jQuery('#sample_4_wrapper'); // datatable creates the table wrapper by adding with id {your_table_jd}_wrapper

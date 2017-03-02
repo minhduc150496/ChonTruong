@@ -5,7 +5,7 @@ $(document).ready(function () {
 		var me = $(this),
 			role = me.attr('data-role'),
 			currTab = $('.nav-tabs .active');
-		var isValidForm = validateSurveyForm() || true;
+		var isValidForm = validateSurveyForm() ;
 		// console.log('--- tab-control button: CLICK' + role + isValidForm);
 
 		if (role == 'prev-tab' && !currTab.is(':first-child')) {
